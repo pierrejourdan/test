@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/components/services/dialog/dialog.service.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../../index.html">all files</a> / <a href="index.html">src/components/services/dialog/</a> dialog.service.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">14.81% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>4/27</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/10</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">11.11% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>1/9</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">14.81% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>4/27</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">'use strict';
+&nbsp;
+angular.module('bpce.lea.services')
+    .factory('dialog', function ($rootScope, ngDialog) {
+&nbsp;
+<span class="fstat-no" title="function not covered" >        function myFunction(val) {</span>
+<span class="cstat-no" title="statement not covered" >            return <span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >                return val;</span>
+            };
+        }
+&nbsp;
+<span class="fstat-no" title="function not covered" >        function transformDataToResolve(datas) {</span>
+<span class="cstat-no" title="statement not covered" >            if (angular.isObject(datas)) {</span>
+<span class="cstat-no" title="statement not covered" >                var resolves = {};</span>
+<span class="cstat-no" title="statement not covered" >                for (var property in datas) {</span>
+<span class="cstat-no" title="statement not covered" >                    if (datas.hasOwnProperty(property)) {</span>
+                        // do stuff
+<span class="cstat-no" title="statement not covered" >                        var value = datas[property];</span>
+<span class="cstat-no" title="statement not covered" >                        resolves[property] = myFunction(value);</span>
+                    }
+                }
+<span class="cstat-no" title="statement not covered" >                return resolves;</span>
+            }
+        }
+&nbsp;
+        return {
+&nbsp;
+            alert: <span class="fstat-no" title="function not covered" >function (message) {</span>
+<span class="cstat-no" title="statement not covered" >                var $scope = $rootScope.$new();</span>
+<span class="cstat-no" title="statement not covered" >                $scope.message = message;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                return ngDialog.open({</span>
+                    template : '&lt;p data-ng-bind-html=\'message | translate:description\'&gt;&lt;/p&gt;' +
+                    '&lt;div class="ngdialog-buttons"&gt;' +
+                    '&lt;button class="o-btn o-btn--secondary" ng-click="closeThisDialog()" translate="COMMON_OK"&gt;' +
+                    '&lt;/div&gt;',
+                    plain    : true,
+                    showClose: false,
+                    className: 'ngdialog-theme-bpce',
+                    scope    : $scope
+                });
+            },
+&nbsp;
+            confirm: <span class="fstat-no" title="function not covered" >function (message, otherConfirmLabel, otherCancelLabel) {</span>
+<span class="cstat-no" title="statement not covered" >                var $scope = $rootScope.$new();</span>
+<span class="cstat-no" title="statement not covered" >                $scope.message = message;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                var confirmLabel = otherConfirmLabel ? otherConfirmLabel : 'COMMON_CONFIRM';</span>
+<span class="cstat-no" title="statement not covered" >                var cancelLabel = otherCancelLabel ? otherCancelLabel : 'COMMON_CANCEL';</span>
+<span class="cstat-no" title="statement not covered" >                return ngDialog.openConfirm({</span>
+                    template : '&lt;p&gt;{{message | translate}}&lt;/p&gt;' +
+                    '&lt;div class="ngdialog-buttons"&gt;' +
+                    '&lt;button class="o-btn o-btn--secondary ngdialog-button" ng-click="closeThisDialog()" translate="' + cancelLabel + '"&gt;&lt;/button&gt;' +
+                    '&lt;button class="o-btn o-btn--primary ngdialog-button" ng-click="confirm()" translate="' + confirmLabel + '"&gt;&lt;/button&gt;' +
+                    '&lt;/div&gt;',
+                    plain    : true,
+                    showClose: false,
+                    className: 'ngdialog-theme-bpce',
+                    scope    : $scope
+                });
+            },
+&nbsp;
+            isOpen: <span class="fstat-no" title="function not covered" >function (id) {</span>
+<span class="cstat-no" title="statement not covered" >                return ngDialog.isOpen(id);</span>
+            },
+&nbsp;
+            close: <span class="fstat-no" title="function not covered" >function (id, data) {</span>
+<span class="cstat-no" title="statement not covered" >                ngDialog.close(id, data);</span>
+            },
+&nbsp;
+            popin: <span class="fstat-no" title="function not covered" >function (url, controller, data, cssclass, showClose) {</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                var params = {</span>
+                    template       : url,
+                    id             : "popin",
+                    plain          : false,
+                    className      : 'ngdialog-theme-bpce-popin',
+                    closeByDocument: false,
+                    controller     : controller,
+                    showClose      : showClose,
+                    closeByEscape  : false,
+                    resolve        : transformDataToResolve(data)
+                };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                if (cssclass) {</span>
+<span class="cstat-no" title="statement not covered" >                    params.className = params.className + " " + cssclass;</span>
+                }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                return ngDialog.openConfirm(params);</span>
+            }
+        };
+    });
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Fri Feb 17 2017 15:01:03 GMT+0100 (CET)
+</div>
+</div>
+<script src="../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../sorter.js"></script>
+</body>
+</html>

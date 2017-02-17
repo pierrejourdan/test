@@ -1,0 +1,515 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/components/directives/projects/projectLine/projectLine.directive.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../../../index.html">all files</a> / <a href="index.html">src/components/directives/projects/projectLine/</a> projectLine.directive.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">30.36% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>17/56</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/16</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">5.26% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>1/19</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">30.36% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>17/56</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">(function () {
+    'use strict';
+&nbsp;
+    angular.module('bpce.lea')
+        .directive('projectLine', projectLine);
+&nbsp;
+<span class="fstat-no" title="function not covered" >    function projectLine() {</span>
+<span class="cstat-no" title="statement not covered" >        return {</span>
+            restrict   : 'E',
+            replace    : true,
+            scope      : {
+                project   : '=',
+                nbProjects: '=',
+                toValidate: '='
+            },
+            controller : projectLineController,
+            templateUrl: '/components/directives/projects/projectLine/projectLine.html'
+        };
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    function projectLineController($scope, $translate, $state, dialog, projectsBackend, localStorage, STATES) {</span>
+&nbsp;
+        /////////////////////////////////////////////////////
+        //
+        //     Bindable elements
+        //
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        $scope.isPropositionState = isPropositionState();</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        $scope.project.isDefault = isDefaultProject($scope.project);</span>
+<span class="cstat-no" title="statement not covered" >        $scope.project.isReserve = isReserveProject($scope.project);</span>
+<span class="cstat-no" title="statement not covered" >        $scope.project.isResidual = isResidualProject($scope.project);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        $scope.project.isEditable = isProjectEditable($scope.project);</span>
+<span class="cstat-no" title="statement not covered" >        $scope.project.isRemovable = isProjectRemovable($scope.project);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        $scope.project.isValidated = isValidatedProject($scope.project);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        $scope.project.priority = adjustProjectPriority($scope.project);</span>
+<span class="cstat-no" title="statement not covered" >        $scope.project.allocatedAmount = adjustProjectAllocatedAmount($scope.project);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        $scope.removeProject = removeProject;</span>
+<span class="cstat-no" title="statement not covered" >        $scope.updateProject = updateProject;</span>
+<span class="cstat-no" title="statement not covered" >        $scope.validateProject = validateProject;</span>
+&nbsp;
+&nbsp;
+        /////////////////////////////////////////////////////
+        //
+        //     State functions definitions
+        //
+&nbsp;
+<span class="fstat-no" title="function not covered" >        function isPropositionState() {</span>
+<span class="cstat-no" title="statement not covered" >            return $state.current.name === STATES.PROPOSITION;</span>
+        }
+&nbsp;
+<span class="fstat-no" title="function not covered" >        function isDefaultProject(project) {</span>
+<span class="cstat-no" title="statement not covered" >            return isReserveProject(project) || isResidualProject(project);</span>
+        }
+&nbsp;
+<span class="fstat-no" title="function not covered" >        function isReserveProject(project) {</span>
+<span class="cstat-no" title="statement not covered" >            return project.type === 'Reserve';</span>
+        }
+&nbsp;
+<span class="fstat-no" title="function not covered" >        function isResidualProject(project) {</span>
+<span class="cstat-no" title="statement not covered" >            return project.type === 'Residual';</span>
+        }
+&nbsp;
+        /*function isAllocatedProject(project) {
+         return project.status === 'Allocated';
+         }*/
+&nbsp;
+<span class="fstat-no" title="function not covered" >        function isNonAllocatedProject(project) {</span>
+<span class="cstat-no" title="statement not covered" >            return project.status === 'NonAllocated';</span>
+        }
+&nbsp;
+<span class="fstat-no" title="function not covered" >        function isValidatedProject(project) {</span>
+<span class="cstat-no" title="statement not covered" >            return project.status === 'Validated';</span>
+        }
+&nbsp;
+        /////////////////////////////////////////////////////
+        //
+        //     Function definitions
+        //
+&nbsp;
+<span class="fstat-no" title="function not covered" >        function adjustProjectAllocatedAmount(project) {</span>
+<span class="cstat-no" title="statement not covered" >            if (isResidualProject(project) &amp;&amp; !project.allocatedAmount) {</span>
+<span class="cstat-no" title="statement not covered" >                return $translate.instant('PROJECT_NO_RESIDUAL');</span>
+            } else <span class="cstat-no" title="statement not covered" >if (isNonAllocatedProject(project)) {</span>
+<span class="cstat-no" title="statement not covered" >                return $translate.instant('PROJECT_NON_ALLOCATED');</span>
+            } else {
+<span class="cstat-no" title="statement not covered" >                return project.allocatedAmount === null ? '-' : project.allocatedAmount;</span>
+            }
+        }
+&nbsp;
+<span class="fstat-no" title="function not covered" >        function adjustProjectPriority(project) {</span>
+<span class="cstat-no" title="statement not covered" >            return isDefaultProject(project) ? $translate.instant('PROJECT_DEFAULT_PRIORITY') : project.priority;</span>
+        }
+&nbsp;
+<span class="fstat-no" title="function not covered" >        function isProjectEditable(project) {</span>
+<span class="cstat-no" title="statement not covered" >            return !isResidualProject(project);</span>
+        }
+&nbsp;
+<span class="fstat-no" title="function not covered" >        function isProjectRemovable(project) {</span>
+<span class="cstat-no" title="statement not covered" >            return !isDefaultProject(project);</span>
+        }
+&nbsp;
+<span class="fstat-no" title="function not covered" >        function removeProject() {</span>
+<span class="cstat-no" title="statement not covered" >            dialog.confirm('PROJECT_CONFIRM_BEFORE_DELETE').then(<span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >                projectsBackend.remove($scope.project.externalReference).then(<span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >                    $scope.$emit('UPDATE_PROJECT_LIST');</span>
+                });
+            });
+        }
+&nbsp;
+<span class="fstat-no" title="function not covered" >        function updateProject() {</span>
+<span class="cstat-no" title="statement not covered" >            var referential = localStorage.getReferential();</span>
+<span class="cstat-no" title="statement not covered" >            var category = _.find(referential.objectiveTypes, {key: $scope.project.type});</span>
+<span class="cstat-no" title="statement not covered" >            dialog.popin('/components/directives/projects/projectPopins/projectCaracteristics.popin.html',</span>
+                'ProjectCaracteristicsCtrl',
+                {
+                    project                : $scope.project,
+                    category               : category,
+                    mode                   : 'update',
+                    priorityOptions        : [{value: 1}, {value: 2}],
+                    priorityOptionsSelected: {value: $scope.project.priority},
+                    nbProjects             : $scope.nbProjects
+                }
+            ).then(<span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >                $scope.$emit('UPDATE_PROJECT_LIST');</span>
+            });
+        }
+&nbsp;
+<span class="fstat-no" title="function not covered" >        function validateProject(project) {</span>
+<span class="cstat-no" title="statement not covered" >            if (project.isValidated) {</span>
+                // TODO: unvalidate other projects
+<span class="cstat-no" title="statement not covered" >                console.log('Goto project proposition again');</span>
+            } else {
+<span class="cstat-no" title="statement not covered" >                if (isReserveProject(project)) {</span>
+<span class="cstat-no" title="statement not covered" >                    $state.go(STATES.CONFIG_RESERVE, {externalReference: project.externalReference});</span>
+                } else {
+<span class="cstat-no" title="statement not covered" >                    $state.go(STATES.CONFIG_PROJECT, {externalReference: project.externalReference});</span>
+                }
+            }
+        }
+&nbsp;
+&nbsp;
+    }
+&nbsp;
+})();
+&nbsp;
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Fri Feb 17 2017 15:01:03 GMT+0100 (CET)
+</div>
+</div>
+<script src="../../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../../sorter.js"></script>
+</body>
+</html>

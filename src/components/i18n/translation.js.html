@@ -1,0 +1,455 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/components/i18n/translation.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">all files</a> / <a href="index.html">src/components/i18n/</a> translation.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>1/1</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/0</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/0</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>1/1</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/*globals i18n:false */
+angular.merge(i18n, {
+&nbsp;
+    APPLICATION_NAME  : ['L\'Epargne active', 'Active Savings'],
+    APPLICATION_SLOGAN: ['Votre épargne au service de vos projets', 'EN Votre épargne au service de vos projets'],
+&nbsp;
+    COMMON_ADD             : ['Ajouter', 'Add'],
+    COMMON_BY_MONTH        : [' / mois', ' / month'],
+    COMMON_CANCEL          : ['Annuler', 'Cancel'],
+    COMMON_CLOSE           : ['Fermer', 'Close'],
+    COMMON_PREVIOUS        : ['Précédent', 'Previous'],
+    COMMON_NEXT            : ['Suivant', 'Next'],
+    COMMON_CONFIRM         : ['Confirmer', 'Confirm'],
+    COMMON_LAST_CONNEXION  : ['Dernière connexion : {{date}}', 'Last connection : {{date}}'],
+    COMMON_MANDATORY_FIELDS: ['* Champs obligatoires', ''],
+    COMMON_NO              : ['Non', 'No'],
+    COMMON_OK              : ['OK', 'OK'],
+    COMMON_VALIDATE        : ['Valider', 'Validate'],
+    COMMON_TOTAL_COLON     : ['Total : ', 'Total : '],
+    COMMON_TOTAL           : ['Total', 'Total'],
+    COMMON_UPDATED_ON      : ['Mis à jour le : {{date}}', 'Update on : {{date}}'],
+    COMMON_VALID_UNTIL     : ['Valide juqu\'au : {{date}}', 'Valid until : {{date}}'],
+    COMMON_YES             : ['Oui', 'Yes'],
+    COMMON_CALCULATE       : ['Calculer', 'Calculate'],
+    COMMON_DETAILS         : ['Détails', 'Details'],
+&nbsp;
+    COMMON_DESIRED_AMOUNT   : ['Montant désiré', ''],
+    COMMON_PROJECT_NB_YEARS : ['Quand désirez-vous ce montant ?', ''],
+    COMMON_SAVING_CAPACITIES: ['Capacité d\'épargne', 'Saving capacities'],
+&nbsp;
+    ERROR_MESSAGE_495_496_497              : ['Une erreur liée au certificat est survenue.', ''],
+    ERROR_MESSAGE_4XX                      : ['Une erreur liée au client web est survenue.', ''],
+    ERROR_MESSAGE_5XX                      : ['Une erreur liée au serveur web est survenue.', ''],
+    // PROFILE COMPLETENESS
+    PROFILE_COMPLETENESS_RISK_PROFILE      : ['Profil de risque', 'Risk profile'],
+    PROFILE_COMPLETENESS_K_AND_E           : ['Connaissance financière', 'Financial knowledge'],
+    PROFILE_COMPLETENESS_EXTERNAL_PATRIMONY: ['Déclaration de votre patrimoine dans d\'autres établissements', 'Patrimony declared in external facilities'],
+    PROFILE_COMPLETENESS_NOTHING_TO_DECLARE: ['Aucune déclaration', 'Nothing to declare'],
+    PROFILE_COMPLETENESS_SAVING_CAPACITY   : ['Mise à jour de votre capacité d\'épargne', 'Saving capacity update'],
+&nbsp;
+    // PROJECT LIST
+    PROJECT_LIST_TITLE  : ['Projets', 'Projects'],
+    PROJECT_REPRIORITISE: ['Reprioriser', 'Update priority'],
+&nbsp;
+    // ADD PROJECT
+    ADD_PROJECT_TITLE           : ['Ajouter un projet', ''],
+    ADD_PROJECT_PROJECT_NAME    : ['Nom de votre projet', ''],
+    ADD_PROJECT_PROJECT_PRIORITY: ['Priorité de votre projet', ''],
+    ADD_PROJECT_PROJECT_NB_YEARS: ['Quand désirez-vous ce montant ?', ''],
+    ADD_PROJECT_AGAIN           : ['Souhaitez-vous créer un nouveau projet ?', ''],
+&nbsp;
+    // UPDATE PROJECT
+    UPDATE_PROJECT_TITLE: ['Modifier un projet', ''],
+&nbsp;
+&nbsp;
+    // PROJECTS LINE
+    PROJECT_ALLOCATED_AMOUNT     : ['Montant alloué', 'Allocated amount'],
+    PROJECT_CONFIRM_BEFORE_DELETE: ['Etes-vous certain de vouloir supprimer ce projet?', ''],
+    PROJECT_DEFAULT_PRIORITY     : ['Défaut', 'Default'],
+    PROJECT_DESIRED_AMOUNT       : ['Désiré', 'Desired'],
+    PROJECT_HORIZON_IN_YEAR      : ['Dans {{horizon}} an', 'In {{horizon}} year'],
+    PROJECT_HORIZON_IN_YEARS     : ['Dans {{horizon}} ans', 'In {{horizon}} years'],
+    PROJECT_NO_RESIDUAL          : ['Pas de montant résiduel', 'No residual amount'],
+    PROJECT_NON_ALLOCATED        : ['Non alloué', 'Non allocated'],
+    PROJECT_PROPOSITION          : ['Proposition', ''],
+&nbsp;
+    // PATRIMOINE
+    PATRIMONY                     : ['Patrimoine', 'Patrimony'],
+    PATRIMONY_OUR_ESTABLISHMENT   : ['Dans notre établissement', 'In our establishment'],
+    PATRIMONY_OTHER_ESTABLISHMENTS: ['Dans d\'autres établissements', 'In others establishments'],
+    PATRIMONY_PROJECTS_INPUTS     : ['Apportés pour les projets : ', 'Contributed for the projects : '],
+    PATRIMONY_TOTAL               : ['Patrimoine total : ', 'Total patrimony : '],
+    PATRIMONY_USABLE_INPUTS       : ['Utilisable pour les projets : ', 'Suitable for projects : '],
+    DEPOSIT                       : ['Versements programmés', 'EN Versements programmés'],
+    DEPOSIT_TOTAL                 : ['Versements programmés total : ', 'EN Versements programmés total : '],
+&nbsp;
+    // SAVING CAPACITY
+    SAVING_CAPACITY_MAIN_TITLE               : ['Votre capacité d\'épargne mensuelle', ''],
+    SAVING_CAPACITY_MONTHLY                  : ['Mensuel', ''],
+    SAVING_CAPACITY_BLOCK_TITLE_SAVINGS      : ['Epargne mensuelle programmée', ''],
+    SAVING_CAPACITY_MONTHLY_INCOME           : ['Revenu moyen net', ''],
+    SAVING_CAPACITY_ANNUAL_INCOME_TAXES      : ['Impôts sur le revenu', ''],
+    SAVING_CAPACITY_ANNUAL_INCOME_TAXES_2    : ['Annuel, soit ', ''],
+    SAVING_CAPACITY_MONTHLY_RENT             : ['Loyer', ''],
+    SAVING_CAPACITY_INTERNAL_MONTHLY_REFUND  : ['Crédit(s) restant(s) dans notre établissement', ''],
+    SAVING_CAPACITY_EXTERNAL_MONTHLY_REFUND  : ['Crédit(s) restant(s) dans d\'autres établissements', ''],
+    SAVING_CAPACITY_MONTHLY_EXPENSES         : ['Autres charges significatives (Pension, Ecole, ...)', ''],
+    SAVING_CAPACITY_INTERNAL_MONTHLY_SAVING  : ['Dans notre établissement', ''],
+    SAVING_CAPACITY_INTERNAL_MONTHLY_SAVING_2: [' (Détails des produits)', ''],
+    SAVING_CAPACITY_EXTERNAL_MONTHLY_SAVING  : ['Autres établissements', ''],
+    SAVING_CAPACITY_TOTAL                    : ['Epargne restante', ''],
+    SAVING_CAPACITY_BLOCK_TITLE_TO_INVEST    : ['A investir', ''],
+    SAVING_CAPACITY_TO_INVEST                : ['A investir', ''],
+    SAVING_CAPACITY_TO_KEEP                  : ['A garder', ''],
+    // INTERNAL SAVINGS
+    INTERNAL_SAVINGS_TITLE                   : ['Détails des produits', ''],
+&nbsp;
+    // PROPOSITION
+    PROPOSITION_PAGE : ['Générer une proposition', 'Generate proposition'],
+    PROPOSITION_TITLE: ['Notre proposition pour vos projets', ''],
+&nbsp;
+    // CONFIG PROJETS
+    CONFIG_RESERVE_TITLE                     : ['Projet «{{projectName}}»', 'Project «{{projectName}}»'],
+    CONFIG_RESERVE_ALLOCATED_AMOUNT          : ['Montant réservé pour la précaution', 'Allocated amount for precaution'],
+    CONFIG_RESERVE_TEXT_1                    : ['Ce projet créé automatiquement vous permet de réserver une épargne pour faire face aux imprévus.', ''],
+    CONFIG_RESERVE_TEXT_2                    : ['Par défaut c\'est le montant que nous vous recommandons pour constituer votre épargne. Vous pouvez bien entendu modifier ce montant.', ''],
+    CONFIG_RESERVE_ALLOCATED_AMOUNT_ERROR_MAX: ['Le montant doit être inférieur à vos liquidités, c\'est à dire {{maxAllocatedAmount}}€', ''],
+&nbsp;
+&nbsp;
+    CONFIG_PROPOSITION_TITLE         : ['Proposition', 'Proposition'],
+    CONFIG_PROPOSITION_TITLE_DETAINED: ['Patrimoine existant', ''],
+    CONFIG_PROPOSITION_TITLE_PROPOSED: ['Patrimoine proposé', ''],
+    CONFIG_VALIDATE_PROPOSITION      : ['Valider la proposition', 'Validate the proposition'],
+&nbsp;
+    CONFIG_PROJECT_PREVISION_TITLE                    : ['Prévision d\'évolution de votre épargne', ''],
+    CONFIG_PROJECT_COMPOSITION_PROPOSITION_TITLE      : ['Composition de la proposition', ''],
+    CONFIG_PROJECT_UNFAVOURABLE                       : ['Défavorable', 'Unfavourable'],
+    CONFIG_PROJECT_NEUTRAL                            : ['Neutre', 'Neutral'],
+    CONFIG_PROJECT_FAVOURABLE                         : ['Favorable', 'Favourable'],
+    CONFIG_PROJECT_DIVERSIFIED_AMOUNT                 : ['Part de produits diversifiés', ''],
+    CONFIG_PROJECT_CONTRIBUTION_TITLE                 : ['Apports au projet', ''],
+    CONFIG_PROJECT_INITIAL_CONTRIBUTION               : ['Apport initial', ''],
+    CONFIG_PROJECT_EXTERNAL_CONTRIBUTION              : ['Apport externe', ''],
+    CONFIG_PROJECT_ESTIMATION_FOR                     : ['Estimation pour : ', ''],
+    CONFIG_PROJECT_GRAPH_LEGEND_SCENARIO_NEUTRAL      : ['Ligne du scénario neutre', ''],
+    CONFIG_PROJECT_GRAPH_LEGEND_SCENARIO_LESS_PROBABLE: ['Zone des scénarios moins probables', ''],
+    CONFIG_PROJECT_GRAPH_LEGEND_SCENARIO_PROBABLE     : ['Zone des scénarios probables', ''],
+    CONFIG_PROJECT_GRAPH_LEGEND_OBJECTIVE             : ['Objectif projet', ''],
+&nbsp;
+    INTERNAL_HOLDINGS_TITLE: ['Avoirs détenus dans l\'établissement', ''],
+});</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Fri Feb 17 2017 15:01:03 GMT+0100 (CET)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>

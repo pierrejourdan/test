@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/components/directives/projects/projectPopins/projectCaracteritics.popin.controller.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../../../index.html">all files</a> / <a href="index.html">src/components/directives/projects/projectPopins/</a> projectCaracteritics.popin.controller.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">15.63% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>5/32</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/3</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/7</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">15.63% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>5/32</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">'use strict';
+&nbsp;
+angular.module('bpce.lea')
+    .controller('ProjectCaracteristicsCtrl', <span class="fstat-no" title="function not covered" >function ($scope, mode, project, projectsBackend, category, rfc4122, nbProjects) {</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        $scope.mode = mode;</span>
+<span class="cstat-no" title="statement not covered" >        $scope.project = angular.copy(project);</span>
+<span class="cstat-no" title="statement not covered" >        $scope.category = category;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        $scope.validate = validate;</span>
+<span class="cstat-no" title="statement not covered" >        $scope.cancel = cancel;</span>
+<span class="cstat-no" title="statement not covered" >        $scope.backToCategories = backToCategories;</span>
+<span class="cstat-no" title="statement not covered" >        $scope.priorityOptions = getPriorityOptions(nbProjects);</span>
+<span class="cstat-no" title="statement not covered" >        $scope.prioritySelected = {value: project.priority};</span>
+&nbsp;
+<span class="fstat-no" title="function not covered" >        function getPriorityOptions(nbProjects) {</span>
+<span class="cstat-no" title="statement not covered" >            var priorities = [];</span>
+<span class="cstat-no" title="statement not covered" >            for (var i = 0; i &lt; nbProjects; i++) {</span>
+<span class="cstat-no" title="statement not covered" >                priorities.push({value: i + 1});</span>
+            }
+<span class="cstat-no" title="statement not covered" >            return priorities;</span>
+        }
+&nbsp;
+<span class="fstat-no" title="function not covered" >        function backToCategories() {</span>
+<span class="cstat-no" title="statement not covered" >            $scope.closeThisDialog('back');</span>
+        }
+&nbsp;
+<span class="fstat-no" title="function not covered" >        function validate() {</span>
+<span class="cstat-no" title="statement not covered" >            switch ($scope.mode) {</span>
+                case 'update':
+<span class="cstat-no" title="statement not covered" >                    var project = {</span>
+                        type             : $scope.project.type,
+                        name             : $scope.project.name,
+                        desiredAmount    : $scope.project.desiredAmount,
+                        date             : moment().add($scope.project.horizonInYears, 'y').format('YYYY-MM-DD'),
+                        priority         : $scope.prioritySelected.value,
+                        externalReference: $scope.project.externalReference
+                    };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                    projectsBackend.update(project).then(<span class="fstat-no" title="function not covered" >function (updatedProject) {</span></span>
+<span class="cstat-no" title="statement not covered" >                        $scope.confirm(updatedProject);</span>
+                    });
+<span class="cstat-no" title="statement not covered" >                    break;</span>
+                case 'create':
+                    // On génère le guid pour le projet.
+<span class="cstat-no" title="statement not covered" >                    $scope.project.externalReference = rfc4122.v4();</span>
+                    // On convertit le nb d'années en date, par rapport à la date du jour.
+<span class="cstat-no" title="statement not covered" >                    $scope.project.date = moment().add($scope.project.horizonInYears, 'y').format('YYYY-MM-DD');</span>
+<span class="cstat-no" title="statement not covered" >                    $scope.project.priority = $scope.prioritySelected.value;</span>
+<span class="cstat-no" title="statement not covered" >                    projectsBackend.add($scope.project).then(<span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >                        $scope.confirm($scope.project);</span>
+                    });
+<span class="cstat-no" title="statement not covered" >                    break;</span>
+                default:
+<span class="cstat-no" title="statement not covered" >                    $scope.closeThisDialog();</span>
+<span class="cstat-no" title="statement not covered" >                    break;</span>
+            }
+        }
+&nbsp;
+<span class="fstat-no" title="function not covered" >        function cancel() {</span>
+<span class="cstat-no" title="statement not covered" >            $scope.closeThisDialog();</span>
+        }
+&nbsp;
+    });</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Fri Feb 17 2017 15:01:03 GMT+0100 (CET)
+</div>
+</div>
+<script src="../../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../../sorter.js"></script>
+</body>
+</html>
